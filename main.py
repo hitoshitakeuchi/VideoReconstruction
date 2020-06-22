@@ -97,5 +97,3 @@ for itr in range(opt.n_itrs):
             save_image((tests[i]/2+0.5), os.path.join(opt.log_folder + '/generated_videos/3dconv', "real_itr{}_no{}.png" .format(itr,i)))
             save_image((recon[i]/2+0.5), os.path.join(opt.log_folder+'/generated_videos/3dconv', "recon_itr{}_no{}.png" .format(itr,i)))
             #torch.save(autoencoder.state_dict(), os.path.join('./weights', 'G_itr{:04d}.pth'.format(itr+1)))
-
-

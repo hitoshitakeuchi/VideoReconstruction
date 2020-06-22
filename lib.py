@@ -6,7 +6,7 @@ import argparse
 class ParseGRU():
     def __init__(self):
         parser = argparse.ArgumentParser()
-        parser.add_argument('--dataset', default='', help='dataset directory')
+        parser.add_argument('--dataset', default='./datasets', help='dataset directory')
         parser.add_argument('--log_folder', default='./logs', help='log directory')
         parser.add_argument('--batch_size', type=int,default=16)
         parser.add_argument('--video_batch', type=int,default=16)
@@ -32,7 +32,5 @@ class Visualizer():
         pylab.ylim(0, max(self.losses)/10)
         plt.plot(self.losses, label='loss')
         plt.legend()
-        plt.savefig(os.path.join(self.opt.log_folder, 'loss_3d.pdf'))
+        plt.savefig(os.path.join(self.opt.log_folder, 'loss.pdf'))
         plt.close()
-
-
